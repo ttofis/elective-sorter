@@ -128,12 +128,12 @@
             }
         }
         scores.sort(sortScores);
+        console.log(scores);
         let x = scores[0][0];
         let rem = 1;
         scores[0][0] = 1;
 
         for (let i = 1; i < options.length; i++) {
-            scores[i][0] = i+1;
             if (scores[i][0] == x) {
                 scores[i][0] = rem;
             }else{
@@ -179,14 +179,14 @@
             }
         }else{
             for (let i = 0; i < options.length; i++) {
-                if (scoring[x][i] != 0 && scoring[x][i] != -2) {
+                if (scoring[x][i] != -2) {
                     let find = isItemInArray(battles, [Math.min(y,i), Math.max(y,i)]);
                     if (find != -1) {
                         removeBattle(find);
                         process(y,i,scoring[x][i]);
                     }
                 }
-                if (scoring[y][i] != 0  && scoring[y][i] != -2) {
+                if (scoring[y][i] != -2) {
                     let find = isItemInArray(battles, [Math.min(x,i), Math.max(x,i)]);
                     if (find != -1) {
                         removeBattle(find);
@@ -289,13 +289,13 @@
         </div>
         <div class="container mx-auto px-4 mt-2">
             <div class="relative overflow-x-auto shadow-md print:shadow-none sm:rounded-lg">
-                <table class="w-full text-lg leading-5 print:leading-[0.3rem] text-left">
+                <table class="w-full text-sm md:text-m lg:text-lg leading-5 print:leading-[0.3rem] text-left">
                     <thead class="bg-surface-300 dark:bg-surface-900 print:bg-white print:border-b">
                         <tr>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" class="px-6 py-3 print:color-black">
                                 Κατάταξη
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" class="px-6 py-3 print:color-black">
                                 Μάθημα
                             </th>
                         </tr>
@@ -303,10 +303,10 @@
                     <tbody>
                         {#each scores as s, i (s)}
                         <tr class="bg-surface-50 border-b border-surface-300 dark:bg-surface-700 dark:border-surface-900  print:bg-white">
-                            <th scope="row" class="px-6 py-3 font-medium whitespace-nowrap">
+                            <th scope="row" class="px-6 py-3 font-medium whitespace-nowrap print:color-black">
                                 {i+1}
                             </th>
-                            <td class="px-6 py-3">
+                            <td class="px-6 py-3 print:color-black">
                                 {s[1]}
                             </td>
                         </tr>
