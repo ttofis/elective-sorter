@@ -6,9 +6,9 @@
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton'
 </script>
 
-<AppShell regionPage="dark:bg-surface-900">
+<AppShell regionPage="dark:bg-surface-900 print:bg-white">
 	<svelte:fragment slot="header">
-		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center" background="bg-surface-300 dark:bg-surface-800">
+		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center" background="bg-surface-300 dark:bg-surface-800 print:bg-white">
 			<a class="text-xl font-medium" href="/">Επιλογή Τρίμηνης Κλινικής</a>
 		</AppBar>
 	</svelte:fragment>

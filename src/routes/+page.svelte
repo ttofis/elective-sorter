@@ -290,7 +290,7 @@
         <div class="container mx-auto px-4 mt-2">
             <div class="relative overflow-x-auto shadow-md print:shadow-none sm:rounded-lg">
                 <table class="w-full text-lg leading-5 print:leading-[0.3rem] text-left">
-                    <thead class="bg-surface-300 dark:bg-surface-900 print:border-b">
+                    <thead class="bg-surface-300 dark:bg-surface-900 print:bg-white print:border-b">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Κατάταξη
@@ -302,7 +302,7 @@
                     </thead>
                     <tbody>
                         {#each scores as s, i (s)}
-                        <tr class="bg-surface-50 border-b border-surface-300 dark:bg-surface-700 dark:border-surface-900">
+                        <tr class="bg-surface-50 border-b border-surface-300 dark:bg-surface-700 dark:border-surface-900  print:bg-white">
                             <th scope="row" class="px-6 py-3 font-medium whitespace-nowrap">
                                 {i+1}
                             </th>
